@@ -1,7 +1,12 @@
 package com.sula.usermanagementsystem.model;
 
+import org.springframework.lang.NonNull;
+
 import javax.persistence.*;
 
+/**
+ * Represents User details.\n@author sula
+ */
 @Entity
 @Table(name = "users")
 public class User {
@@ -11,11 +16,13 @@ public class User {
     private long id;
 
     @Column(name = "first_name")
+    @NonNull
     private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
 
+    @NonNull
     private String email;
 
     private String role;
