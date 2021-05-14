@@ -86,7 +86,11 @@ public class UserController {
      */
     @PutMapping("/users/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userData) throws ResourceNotFoundException, EmailAlreadyExistException {
-        User user= userRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("No Such User"));
+        User user= userRepository.findById(userData.getId()).get();
+        System.out.println("xxxxxxxxxxxx"+user.getId());
+        if(user.getId()<=0){
+            throw new ResourceNotFoundException("No such User in the DB");
+        }
         Boolean emailExist=userService.checkEmailAlreadyExist(userData.getEmail());
         if(emailExist){
             throw new EmailAlreadyExistException("The Email Already in Use");
