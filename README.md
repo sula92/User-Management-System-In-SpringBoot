@@ -152,19 +152,6 @@ Please Follow below steps to run the project.
 *Use the installed rest client in order to send the REST Requests and to do the crud operations.
 
 
-RODMAP:
-
-The UI will be created soon in vueJS.
-
-CONTRIBUTION:
-
-1.Fork the Project
-2.Create your Feature Branch (git checkout -b feature/AmazingFeature)
-3.Commit your Changes (git commit -m 'Add some AmazingFeature')
-4.Push to the Branch (git push origin feature/AmazingFeature)
-5.Open a Pull Request
-
-
 USAGE:
 
 Please follow this link given below.
