@@ -23,6 +23,7 @@ public class User {
     private String lastName;
 
     @NonNull
+    @Column(unique = true)
     private String email;
 
     private String role;
